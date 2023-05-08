@@ -1,0 +1,17 @@
+body {
+    background-color: white
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+#query {
+    background-color: lightcyan;
+}
+
+#results {
+    min-width: 70vw;
+}
