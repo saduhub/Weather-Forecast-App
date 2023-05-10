@@ -1,19 +1,24 @@
 const apiKey = '';
 
-
+let stringStored = localStorage.getItem('places')
+let arrayFromStorage = stringStored ? stringStored.split(',') : [];
+console.log(arrayFromStorage);
 
 // url will be modified depending on the query made
 let queryInput = $('.query-item');
 let submitButton = $('.submit-btn');
 let cardContainer = $('#results');
+let queryBar = $('#query');
+let searchTerm;
+let placesArray = [];
 
-submitButton.on('click', function(event) {
-    event.preventDefault();
-    let searchTerm = queryInput.val();
+
+function getForecast() {
+    // searchTerm = queryInput.val();
     let weatherApiCoordinates = `http://api.openweathermap.org/geo/1.0/direct?q=${searchTerm}&limit=5&appid=${apiKey}`
     let lat;
     let lon;
-
+    let city;
 // get lat and lon
     fetch(weatherApiCoordinates)
         .then(function(response) {
@@ -39,7 +44,7 @@ submitButton.on('click', function(event) {
                     }
                 })
                 .then(function(data) {
-                    let city = data.name;
+                    city = data.name;
 
                     console.log(city);
                 })
@@ -113,5 +118,38 @@ submitButton.on('click', function(event) {
             console.log(error);
             alert(error.message);
         });
-        
+}
+
+if (arrayFromStorage.length > 0) {
+    arrayFromStorage.forEach((city) => {
+        let preLoadedButton = $('<button>').addClass('saved-city').attr('data-city', city).text(city);
+        queryBar.append(preLoadedButton); 
+
+        // preLoadedButton.on('click', function(event) {
+        //     event.preventDefault();
+        //     searchTerm = $(this).data('city');
+        //     getForecast();
+        // });
+    })
+}
+
+
+submitButton.on('click', function(event) {
+    event.preventDefault();
+    searchTerm = queryInput.val();
+    getForecast();
+    let cityButton = $(`<button>${queryInput.val()}</button>`);
+    cityButton.attr('data-city', `${queryInput.val()}`);
+    cityButton.attr('class', 'saved-city');
+    placesArray.push(queryInput.val())
+    console.log(placesArray);
+    localStorage.setItem('places', placesArray);
+    queryBar.append(cityButton);
 });
+
+queryBar.delegate('.saved-city','click', function(event) {
+    event.preventDefault();
+    searchTerm = $(this).data('city');
+    getForecast();
+});
+
