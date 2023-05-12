@@ -18,13 +18,15 @@
 <body>
     <main class="container-fluid p-0">
         <div id="query" class="container col-md-3">
-            <h1>Search Engine</h1>
+            <h1 class="text-center">WeatherWatch</h1>
             <div class="row justify-content-center mt-5">
               <div class="col-md-6">
                 <form>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Query Item</label>
-                    <input type="email" class="form-control query-item" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <!-- <label for="API-input">API Key</label>
+                    <input type="text" class="form-control api" id="API-input" aria-describedby="API-input"> -->
+                    <label for="city-input">City</label>
+                    <input type="text" class="form-control query-item" id="city-input" aria-describedby="city-input">
                   </div>
                   <button type="submit" class="btn btn-primary submit-btn">Submit</button>
                   <button type="submit" class="btn btn-primary submit-btn clear">clear</button>
@@ -35,17 +37,17 @@
             </div>
         </div>
         <div class="container col-md-9 forecast">
-          <h2 class="text-center mt-5">Welcome to the Weather Watch!</h2>
+          <h2 class="text-center mt-5">Welcome to Weather Watch!</h2>
           <div class="row justify-content-center mt-5">
             <div class="col-md-10">
               <div class="card">
                 <div class="card-body p-5">
                   <h3 class="card-title">Enter a location in the query bar to get the latest weather updates!</h3>
-                  <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo iusto nisi nostrum culpa rerum quidem porro quisquam non possimus voluptate vero sequi perspiciatis, itaque quibusdam, odio modi illum cupiditate! Velit.
-                  Exercitationem unde accusantium incidunt. Laudantium, id voluptatibus iure dolores soluta blanditiis? Voluptatum delectus, eaque reiciendis a aliquid maxime esse, repellendus beatae nobis sint quasi aut nesciunt praesentium et doloribus laborum!
-                  Blanditiis est suscipit debitis, voluptate minus repellat aperiam eum consectetur laborum velit ducimus quisquam corrupti tenetur rem aspernatur tempore eveniet dolore. Et necessitatibus non officiis accusamus. Molestiae itaque optio qui.
-                  Quam quis dolorem et quisquam iste nisi amet reiciendis neque. Similique optio perspiciatis tempora perferendis doloribus corporis aperiam voluptatibus! Quo odio ratione ipsam velit minus, recusandae corporis dolores nemo optio!
-                  Accusamus accusantium illo culpa voluptates natus rerum nesciunt quisquam impedit quo facere deleniti ipsa dolore nobis odit, soluta voluptas quas! Debitis, quia. Odio labore tempore ad explicabo cumque fuga recusandae.</p>
+                  <ol>
+                    <li>Real-Time Weather Updates: WeatherApp fetches the latest weather data from reliable sources, ensuring you receive the most accurate and current information available. Stay informed about temperature, humidity, wind speed, and more.</li>
+                    <li>You can search for weather conditions in any desired location and save multiple locations for quick access.</li>
+                    <li>Stay prepared by knowing the expected weather, including temperature and chances of precipitation.</li>
+                  </ol>
                 </div>
               </div>
             </div>

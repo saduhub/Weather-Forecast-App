@@ -1,5 +1,5 @@
 body {
-    background-color: white
+    color: #e0e1dd;
 }
 
 main {
@@ -9,10 +9,44 @@ main {
 }
 
 #query {
-    background-color: lightcyan;
+    background-color: #0d1b2a;
+    padding-top: 50px;
 }
 
-#results {
+.forecast {
     min-width: 70vw;
+    background-color: #778da9;
 }
+
+.card-body {
+    background-color: #415a77;
+}
+
+.card {
+    border: none;
+}
+
+.current {
+    background-color: #1b263b;
+}
+
+form {
+    margin: 50px 0px;
+}
+
+.btn-primary {
+    margin-top: 10px;
+    background-color: #415a77;
+    border: none;
+    color: #e0e1dd;
+}
+
+.saved-city {
+    margin-top: 20px;
+    background-color: #415a77;
+    border: none;
+    color: #e0e1dd;
+}
+
+
 
