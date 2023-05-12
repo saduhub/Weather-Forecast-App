@@ -1,18 +1,29 @@
 body {
     color: #e0e1dd;
 }
-
+/* main container */
 main {
     display: flex;
     flex-direction: row;
     min-height: 100vh;
 }
-
+/* navbar */
 #query {
     background-color: #0d1b2a;
     padding-top: 50px;
 }
+/* form in navbar */
+form {
+    margin: 50px 0px;
+}
 
+.btn-primary {
+    margin-top: 10px;
+    background-color: #415a77;
+    border: none;
+    color: #e0e1dd;
+}
+/* cards portraying 5 day forecast and current weather */
 .forecast {
     min-width: 70vw;
     background-color: #778da9;
@@ -28,17 +39,6 @@ main {
 
 .current {
     background-color: #1b263b;
-}
-
-form {
-    margin: 50px 0px;
-}
-
-.btn-primary {
-    margin-top: 10px;
-    background-color: #415a77;
-    border: none;
-    color: #e0e1dd;
 }
 
 .saved-city {
