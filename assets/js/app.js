@@ -1,5 +1,5 @@
 let apiKey = prompt('Please enter your API key:');
-if (apiKey !== 'd724417376cf2c6ae9c68c088b23996a') {
+if (!apiKey) {
     alert('For security reasons, the exact API key is required. Please note that it will not be saved into local storage. It was provided with the assignment submission. Please refresh the page and try again.');
 } else {
     let queryInput = $('.query-item');
