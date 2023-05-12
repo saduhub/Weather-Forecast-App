@@ -15,7 +15,7 @@ if (apiKey !== 'd724417376cf2c6ae9c68c088b23996a') {
 
     function getForecast() {
         // searchTerm = queryInput.val();
-        let weatherApiCoordinates = `http://api.openweathermap.org/geo/1.0/direct?q=${searchTerm}&limit=5&appid=${apiKey}`
+        let weatherApiCoordinates = `https://api.openweathermap.org/geo/1.0/direct?q=${searchTerm}&limit=5&appid=${apiKey}`
         let lat;
         let lon;
         let city;
