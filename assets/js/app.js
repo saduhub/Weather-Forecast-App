@@ -58,8 +58,8 @@ if (!apiKey) {
                         let cardBody = $('<div>').addClass('card-body current');
                         let cardCity = $('<h2>').addClass('card-title').text(`${city}`);
                         let cardTitle = $('<h3>').addClass('card-title').text(`${currentDate}`);
-                        let temperature = $('<p>').addClass('card-text').text(`${currentFahrenheit}F / ${currentCelsius}C`);
-                        let humidity = $('<p>').addClass('card-text').text(`${currentHum}%`);
+                        let temperature = $('<p>').addClass('card-text').text(`${currentFahrenheit} F° / ${currentCelsius} C°`);
+                        let humidity = $('<p>').addClass('card-text').text(`${currentHum}% humidity`);
                         let windSpeed = $('<p>').addClass('card-text').text(`${currentWind} mph`);
 
                         cardBody.append(cardCity, cardTitle, temperature, humidity, windSpeed);
@@ -120,8 +120,8 @@ if (!apiKey) {
                                 let wind = Math.floor(dataList[i].wind.speed * 2.23694);
                                 let icon = dataList[i].weather[0].icon;
                                 console.log(formatDate);
-                                console.log(`${celsius} C`);
-                                console.log(`${fahrenheit} F`);
+                                console.log(`${celsius} C°`);
+                                console.log(`${fahrenheit} F°`);
                                 console.log(`${kelvin} K`);
                                 console.log(`${hum}%`);
                                 console.log(`${wind} mph`);
@@ -132,8 +132,8 @@ if (!apiKey) {
                                 let card = $('<div>').addClass('card');
                                 let cardBody = $('<div>').addClass('card-body');
                                 let cardTitle = $('<h3>').addClass('card-title').text(`${formatDate}`);
-                                let temperature = $('<p>').addClass('card-text').text(`${fahrenheit}F / ${celsius}C`);
-                                let humidity = $('<p>').addClass('card-text').text(`${hum}%`);
+                                let temperature = $('<p>').addClass('card-text').text(`${fahrenheit} F° / ${celsius} C°`);
+                                let humidity = $('<p>').addClass('card-text').text(`${hum}% humidity`);
                                 let windSpeed = $('<p>').addClass('card-text').text(`${wind} mph`);
 
                                 cardBody.append(cardTitle, temperature, humidity, windSpeed);
